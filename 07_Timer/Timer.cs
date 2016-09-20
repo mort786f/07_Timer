@@ -2,17 +2,18 @@
 {
     internal class Timer
     {
-        int v = timer.Seconds;
-        public int Seconds
+        private int seconds = 0;
+        public double Seconds
+        
         {
-            get
-            {
-                return Seconds;
-            }
-            internal set
-            {
-                string timer = "";
-            }
+            get { return seconds / 3600}
+            set { seconds = value * 3600; }
+        }
+
+        public override string ToString()
+        {
+
+            return Seconds + "";
         }
     }
 }
