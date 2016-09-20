@@ -25,12 +25,12 @@ namespace _07_Timer
             timer.Seconds = 0;
             Assert.AreEqual("00:00:00", timer.ToString());
         }
-        //[TestMethod]
-        //public void ShouldDisplay12SecondsToStringAs00ː00ː12()
-        //{
-        //    timer.Seconds = 12;
-        //    Assert.AreEqual("00:00:12", timer.ToString());
-        //}
+        [TestMethod]
+        public void ShouldDisplay12SecondsToStringAs00ː00ː12()
+        {
+            timer.Seconds = 12;
+            Assert.AreEqual("00:00:12", timer.ToString());
+        }
         //[TestMethod]
         //public void ShouldDisplay66SecondsToStringAs00ː01ː06()
         //{

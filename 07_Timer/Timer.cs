@@ -3,17 +3,18 @@
     internal class Timer
     {
         private int seconds = 0;
-        public double Seconds
-        
+        public int Seconds
         {
-            get { return seconds / 3600}
-            set { seconds = value * 3600; }
+            get { return seconds; }
+            set { seconds = value; }
         }
+        int hours = (int)(Seconds / 3600);
+        int min = (int)(Seconds / 60) % 60;
+        int sec = (int)(Seconds % 60);
 
         public override string ToString()
         {
-
-            return Seconds + "";
+            return hours.ToString() + ":" + min.ToString() + ":" + sec.ToString(); ;
         }
     }
 }
